@@ -2,8 +2,21 @@
 Factorial, in mathematics, the product of all positive integers less than or equal to a given positive integer and denoted by that integer and an exclamation point. Thus, factorial seven is written 7!, meaning 1 × 2 × 3 × 4 × 5 × 6 × 7. Factorial zero is defined as equal to 1.
 */
 
-
 function factorial(a) {
+    if (a == 0) {
+        return 1;
+    } else {
+        //debugger;
+        //console.log(a)
+        return a * factorial(a - 1);
+    }
+}
+
+const fact = (a) => (a == 0) ? 1 : a * fact(a - 1);
+
+
+
+function oldFactorial(a) {
     let i = a;
     let product = 1;
 
